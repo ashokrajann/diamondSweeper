@@ -1,0 +1,125 @@
+/* Base Styles */
+:root {
+    --background: #2D2A32;
+    --overlays: #FFC857;
+    --border: rgb(235, 178, 65);
+    --score: red;
+    --gem: #4CE0D2;
+    --whiteText: #F1F7EE;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body,
+button {
+    font-family: 'Fredoka One', cursive;
+    background: var(--background);
+    font-size: 18px;
+    color: #2A2B2E;
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    font-size: 32px;
+    padding: 50px;
+    min-width: 1024px;
+}
+
+
+/* Grid Styles */
+
+.grid-container {
+    display: flex;
+    width: 600px;
+    height: 600px;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+.grid-box {
+    width: 12.5%;
+    height: 12.5%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--border);
+}
+
+.grid-box-overlay {
+    background: var(--overlays);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.grid-box-content {
+    color: var(--overlays);
+}
+
+.fa-gem {
+    color: var(--gem);
+}
+
+
+/* Panel Styles */
+
+.game-panel {
+    background: var(--whiteText);
+    border-radius: 8px;
+    padding: 20px;
+    height: 320px;
+    width: 320px;
+    position: relative;
+    margin-left: 25px;
+}
+
+.game-levels,
+.diamonds-found {
+    margin-bottom: 20px;
+}
+
+.game-levels input {
+    outline: none;
+    font-size: 24px;
+    width: 50px;
+    height: 50px;
+    border: 2px solid #5A5A66;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.game-levels input.active {
+    color: var(--whiteText);
+    background: #5A5A66;
+    border: none;
+}
+
+.start-again {
+    color: var(--whiteText);
+    border: none;
+    border-radius: 4px;
+    background: #5A5A66;
+    padding: 12px 24px;
+    cursor: pointer;
+    border-bottom: 4px solid #2A2B2E;
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    outline: none;
+}
+
+.start-again:hover {
+    background: rgb(69, 69, 78);
+}
+
+.start-again:active {
+    border: none;
+}
+
+.game-score {
+    color: red;
+}
